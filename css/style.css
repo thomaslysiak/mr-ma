@@ -1,0 +1,95 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c99638;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+}
+
+.page {
+  width: 980px;
+  height: 880px;
+  background-color: #c99638;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title */
+.title {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  letter-spacing: 0.12em;
+  color: #e1d28c;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Calendar card */
+.calendar {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  box-shadow: 4px 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Day header (red band) */
+.calendar-header {
+  background-color: #D81E1E;
+  padding: 18px 0;
+  text-align: center;
+}
+
+.calendar-header span {
+  font-family: 'Black Han Sans', 'Oswald', sans-serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+  letter-spacing: 0.14em;
+  color: #111;
+  text-transform: uppercase;
+}
+
+/* Date body (white) */
+.calendar-body {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+}
+
+.calendar-body span {
+  font-family: 'Black Han Sans', 'Oswald', sans-serif;
+  font-weight: 900;
+  font-size: 8rem;
+  color: #111;
+  line-height: 1;
+}
+
+/* Footer credits */
+.footer {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: #e1d28c;
+  text-transform: uppercase;
+}
