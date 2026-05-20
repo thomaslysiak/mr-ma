@@ -1,11 +1,12 @@
 // script.js — Merci Mr Ma
-
-// Met à jour automatiquement le jour et la date affichés dans le calendrier
+ 
 const days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
-
+const months = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE',
+                'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'];
+ 
 const now = new Date();
-const dayName = days[now.getDay()];
-const dayNumber = now.getDate();
-
-document.querySelector('.calendar-header span').textContent = dayName;
-document.querySelector('.calendar-body span').textContent = dayNumber;
+ 
+document.querySelector('.calendar-header span').textContent = days[now.getDay()];
+document.querySelector('.calendar-body span').textContent = now.getDate();
+document.querySelector('.calendar-month').textContent = months[now.getMonth()];
+ 
