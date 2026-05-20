@@ -11,35 +11,32 @@ body {
   justify-content: center;
   background-color: #c99638;
   font-family: 'Oswald', sans-serif;
-  position: relative;
 }
 
 .page {
   width: 980px;
-  height: 880px;
+  min-height: 880px;
   background-color: #c99638;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 60px;
+  padding: 60px 20px 50px;
+  position: relative;
 }
 
 /* Title */
 .title {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-text-align: center;
+  text-align: center;
 }
 
 .title-main {
-  font-family: 'Noto Serif SC', 'Oswald', serif;
+  font-family: 'Noto Serif SC', serif;
   font-weight: 700;
   font-size: 3.6rem;
   letter-spacing: 0.15em;
@@ -59,6 +56,7 @@ text-align: center;
   display: block;
   white-space: nowrap;
 }
+
 /* Calendar link */
 .calendar-link {
   text-decoration: none !important;
@@ -67,7 +65,6 @@ text-align: center;
   border: none;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 0.2s ease;
 }
 
 .calendar-link:link,
@@ -78,20 +75,22 @@ text-align: center;
   text-decoration: none !important;
   outline: none;
   border: none;
-  box-shadow: none;
   color: inherit;
 }
 
-.calendar-link:hover .calendar {
-  transform: scale(1.03);
-  box-shadow: 6px 10px 32px rgba(0, 0, 0, 0.35);
-  cursor: pointer;
 /* Calendar card */
 .calendar {
   display: flex;
   flex-direction: column;
   width: 420px;
   box-shadow: 4px 6px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calendar-link:hover .calendar {
+  transform: scale(1.03);
+  box-shadow: 6px 10px 32px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
 }
 
 /* Day header (red band) */
@@ -129,13 +128,12 @@ text-align: center;
 
 /* Footer credits */
 .footer {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   color: #e1d28c;
   text-transform: uppercase;
+  align-self: flex-start;
+  padding-left: 10px;
 }
