@@ -59,7 +59,18 @@ text-align: center;
   display: block;
   white-space: nowrap;
 }
+/* Calendar link */
+.calendar-link {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.calendar-link:hover .calendar {
+  transform: scale(1.03);
+  box-shadow: 6px 10px 32px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
 /* Calendar card */
 .calendar {
   display: flex;
